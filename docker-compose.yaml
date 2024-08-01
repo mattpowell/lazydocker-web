@@ -1,0 +1,9 @@
+services:
+  lazydocker:
+    build: .
+    container_name: lazydocker
+    ports:
+      - "7681:7681"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config.yml:/root/.config/lazydocker/config.yml
