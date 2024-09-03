@@ -2,6 +2,7 @@ services:
   lazydocker:
     build: .
     container_name: lazydocker
+    restart: unless-stopped
     ports:
       - "7681:7681"
     volumes:
